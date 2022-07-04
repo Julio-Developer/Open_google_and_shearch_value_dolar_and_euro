@@ -49,8 +49,6 @@ time(1)
 value_euro = browser.find_elements(
     'xpath', '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]')[0].text
 
-print(str(value_dollar), str(value_euro))
-
 # Creating the worksheet
 path_of_file = ('/home/julio_gabriel/Meus Arquivos/Meus arquivos/Estudo/Cursos/Python/Curso_RPA_Python/Programs Created/Programa para abrir o google e perquisar o valor do dolar e do euro/values.xlsx')
 file = xwr.Workbook(path_of_file)
@@ -63,8 +61,4 @@ sheet1.write("A2", "Dolar")
 sheet1.write("A3", "Euro")
 sheet1.write("B2", value_dollar)
 sheet1.write("B3", value_euro)
-
-
-
-
-
+file.close()
